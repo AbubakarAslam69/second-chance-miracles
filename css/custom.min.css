@@ -1,0 +1,1356 @@
+/* FONT IMPORT */
+
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Local Font */
+
+
+/* @font-face {
+	font-family: "Font Name";
+	src: url("../fonts/fontpath.ttf");
+  } */
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary: #ff0000;
+    --secondary: #808080;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    background: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+section {
+    position: relative;
+}
+
+h2,
+h3 {
+    font-family: "Outfit", sans-serif;
+}
+
+p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #6E7070;
+}
+
+.img-auto {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+a,
+button {
+    text-decoration: none !important;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+a:hover,
+button:hover {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/* Cursor Start */
+
+.mouse-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    visibility: hidden;
+}
+
+.cursor-inner {
+    margin-left: 2px;
+    margin-top: 2px;
+    width: 7px;
+    height: 7px;
+    z-index: 10000001;
+    background-color: var(--primary);
+    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.cursor-inner.cursor-hover {
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary);
+    opacity: 0.3;
+}
+
+
+/* Cursor End */
+
+
+/* PRELOADER */
+
+.preLoader {
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.preLoader.black {
+    background-color: var(--white);
+    z-index: 11113;
+}
+
+.preLoader.white {
+    z-index: 11112;
+    background-color: var(--black);
+}
+
+
+/* PRELOADER */
+
+
+/* GLOBAL CSS */
+
+.themeBtn {
+    background: var(--primary);
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: unset;
+    font-weight: 500;
+    display: inline-flex;
+    justify-content: center;
+    border: none;
+    line-height: normal;
+    border-radius: 50px;
+    padding: 0.8125rem 1.77em;
+    align-items: center;
+    gap: 0.75rem;
+    text-transform: capitalize;
+}
+
+.themeBtn:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+
+/* !GLOBAL CSS */
+
+
+/* NAV HEADER CSS */
+
+header {
+    padding-top: 1rem;
+}
+
+header .container {
+    max-width: 1440px;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand img {
+    width: 220px;
+}
+
+.navbar-nav {
+    align-items: center;
+    gap: 3rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1rem;
+    color: var(--b);
+    padding: 0 0;
+    display: inline-block;
+}
+
+.form-inline {
+    margin-left: 3.75rem;
+}
+
+
+/* !NAV HEADER CSS */
+
+
+/* Helping Sec Css Start */
+
+.helpingSec {
+    padding: 5.625rem 4.375rem 7.5rem 4.375rem;
+}
+
+.helpingSec:before {
+    content: "";
+    position: absolute;
+    background: var(--secondary);
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    opacity: 30%;
+}
+
+.helpingImage {
+    position: relative;
+    z-index: 1;
+}
+
+.helpingImage img {
+    border-radius: 2rem;
+}
+
+.helpingContent {
+    margin: 2.5rem 0 6rem 0;
+}
+
+.helpingContent h2 {
+    font-size: 3.125rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.4;
+    color: var(--black);
+}
+
+.helpingContent p {
+    width: 63%;
+    margin: 1.2rem 0 1.5rem 0;
+}
+
+.themeBtn1 {
+    padding: 1.32rem 2.24em;
+}
+
+.helpingWraps {
+    overflow: hidden;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.helpText {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgb(0 0 0 / 30%);
+    transform: scale(0);
+    transition: 0.5s ease;
+}
+
+.helpingSlider .swiper-slide-active .helpText {
+    transform: scale(1);
+}
+
+.helpText h4 {
+    color: var(--white);
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.helpingSec .swiper-button-next:after,
+.helpingSec .swiper-button-prev:after {
+    display: none;
+}
+
+.helpingSec .swiper-button-next,
+.helpingSec .swiper-button-prev {
+    background: var(--white);
+    width: 48px;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    color: var(--black);
+    top: inherit;
+    bottom: 6.5rem;
+}
+
+.helpingSec .swiper-button-prev {
+    left: -0.5rem;
+}
+
+.helpingSec .swiper-button-next {
+    right: -0.5rem;
+}
+
+.counterWraps {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 6.25rem;
+}
+
+.secHeading {
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.counterWraps h5 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.helpingShapes img {
+    position: absolute;
+    animation: zoom-in-zoom-out 5s ease infinite;
+}
+
+.shape1 {
+    top: 17%;
+    left: 1rem;
+}
+
+.shape2 {
+    bottom: 25.5%;
+    left: 2rem;
+}
+
+.shape3 {
+    bottom: 2.5rem;
+    right: -3.5rem;
+    overflow: hidden;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Helping Sec Css End */
+
+
+/* About Sec Css Start */
+
+.aboutSec {
+    padding: 7.5rem 4rem 7.5rem 15rem;
+}
+
+.aboutContent p {
+    width: 80%;
+    margin: 1.75rem 0 3rem 0;
+}
+
+.aboutWraps ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.aboutWraps ul li span {
+    font-size: 1.125rem;
+    color: var(--black);
+}
+
+.aboutWraps ul li+li {
+    margin-top: 0.875rem;
+}
+
+.aboutCall div {
+    background: var(--black);
+    width: 52px;
+    height: auto;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+}
+
+.aboutCall h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 1.2rem 0 0.75rem 0;
+}
+
+.aboutCall h5 {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.aboutWraps {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.aboutWraps ul {
+    border-right: 1px solid #C2D6C2;
+    padding-right: 2.5rem;
+}
+
+.aboutContent .btn-group {
+    gap: 1rem;
+}
+
+.aboutContent .themeBtn1 {
+    padding: 1.32rem 3em;
+}
+
+.borderBtn {
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+}
+
+.aboutSlider .swiper-slide {
+    width: 434px;
+}
+
+.aboutSlider {
+    margin-left: -3rem;
+}
+
+.videoBtns a {
+    background: var(--secondary);
+    width: 140px;
+    height: 140px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: 20px solid var(--white);
+    outline: 1px solid rgb(128 128 128 / 30%);
+    color: var(--white);
+}
+
+.videoBtns {
+    position: absolute;
+    top: 5rem;
+    z-index: 1;
+    left: -6rem;
+}
+
+.aboutShape {
+    position: absolute;
+    right: 14%;
+    bottom: 7rem;
+    z-index: -1;
+}
+
+
+/* About Sec Css End */
+
+
+/* Work Sec Css Start */
+
+.workSec {
+    padding: 6.25rem 0 7.5rem 0;
+    background: rgb(128 128 128 / 30%);
+    border-radius: 5rem 5rem 0 0;
+}
+
+.workHeading div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2.8125rem;
+}
+
+.workHeading p {
+    margin: 0;
+}
+
+.workHeading .themeBtn1 {
+    padding: 1.32rem 3.3em;
+}
+
+.workIocn {
+    border: 1px solid var(--black);
+    width: 95px;
+    height: auto;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.workWraps h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+    min-height: 57px;
+}
+
+.workWraps p {
+    margin-bottom: 1.75rem;
+}
+
+.workWraps figure img {
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.workShapes img {
+    position: absolute;
+    animation: zoom-in-zoom-out 5s ease infinite;
+}
+
+.wrk1 {
+    top: -2rem;
+    left: 5rem;
+}
+
+.wrk2 {
+    left: 16rem;
+    bottom: 3rem;
+    z-index: -1;
+}
+
+.wrk3 {
+    top: 6.25rem;
+    right: 2.5rem;
+}
+
+.wrk4 {
+    bottom: 0;
+    right: 2.8125rem;
+}
+
+
+/* Work Sec Css End */
+
+
+/* Guide Sec Css Start */
+
+.guideSec {
+    background: #364440;
+    padding: 4.375rem 0;
+}
+
+.quideImages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quideImages li figure {
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    margin-top: 9.375rem;
+}
+
+.quideImages li figure:before {
+    content: "";
+    position: absolute;
+    background: #364440;
+    inset: 0;
+    opacity: 20%;
+}
+
+.quideImages li:nth-child(2) figure {
+    margin: 0;
+}
+
+.quideContent {
+    text-align: center;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.quideContent h2 {
+    margin-bottom: 1.75rem;
+}
+
+.quideContent .themeBtn1 {
+    position: relative;
+    z-index: 1;
+}
+
+.quiteimageBottom li figure {
+    margin: 0;
+}
+
+.quiteimageBottom li:nth-child(2) figure {
+    margin-top: 9.375rem;
+}
+
+.quiteimageBottom {
+    margin-top: -4rem;
+}
+
+
+/* Guide Sec Css End */
+
+
+/* Customer Sec Css Start */
+
+.customerSec {
+    border-radius: 0 0;
+}
+
+.customerWrap figure img {
+    border-radius: 1.5rem;
+}
+
+.customerWrap {
+    display: flex;
+    align-items: center;
+}
+
+.customerBox {
+    flex: 1;
+    background: var(--white);
+    border-radius: 1.5rem;
+    margin-left: -19rem;
+    padding: 2rem 2rem;
+}
+
+.customerBox ul {
+    display: flex;
+    gap: 8px;
+}
+
+.customerBox ul li i {
+    color: #E2B93B;
+}
+
+.customerBox p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #6E7070;
+    margin: 0.625rem 0 1.25rem 0;
+}
+
+.customerName {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customerName h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.customerName h3 span {
+    display: block;
+    font-size: 1rem;
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #6E7070;
+}
+
+.quote span {
+    background: #E5E4E9;
+    width: 92%;
+    height: 1px;
+    display: inline-block;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -2rem;
+    margin-bottom: 1rem;
+}
+
+.customerSlider {
+    margin-right: -35rem;
+    padding-top: 2rem;
+}
+
+.customerSec .swiper-button-next:after,
+.customerSec .swiper-button-prev:after {
+    display: none;
+}
+
+.customerSec .swiper-button-next,
+.customerSec .swiper-button-prev {
+    border: 1px solid var(--black);
+    width: 50px;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    color: var(--black);
+    top: 20%;
+    transition: 0.5s ease;
+}
+
+.customerSec .swiper-button-next:hover,
+.customerSec .swiper-button-prev:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.customerSec .swiper-button-next {
+    right: 16%;
+}
+
+.customerSec .swiper-button-prev {
+    left: inherit;
+    right: 19%;
+}
+
+.customerImage img {
+    position: absolute;
+    animation: zoom-in-zoom-out 5s ease infinite;
+}
+
+.customershape1 {
+    left: 6.25rem;
+    top: 8.125rem;
+}
+
+.customershape2 {
+    top: 6.25rem;
+    left: 57%;
+}
+
+
+/* Customer Sec Css End */
+
+
+/* Team Sec Css Start */
+
+.teamSec {
+    background: #364440;
+    padding: 6.25rem 0;
+}
+
+.teamSec .workHeading .themeBtn1 {
+    background: transparent;
+    border: 1px solid var(--white);
+    padding: 1.25rem 2.1em;
+}
+
+.teamSec .workHeading .themeBtn1:hover {
+    background: var(--black);
+    border-color: var(--black);
+}
+
+.teamWrap {
+    border-radius: 1.5rem 1.5rem;
+    overflow: hidden;
+}
+
+.teamWrap figure {
+    overflow: hidden;
+}
+
+.teamWrap figure img {
+    transition: 0.5s ease;
+}
+
+.teamWrap figure:hover img {
+    transform: scale(1.1);
+}
+
+.teamContent {
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.375rem;
+}
+
+.teamContent h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.teamContent h3 span {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Inter';
+}
+
+.teamContent a {
+    background: var(--white);
+    width: 40px;
+    height: auto;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+}
+
+
+/* Team Sec Css End */
+
+
+/* Contact Sec Css Start */
+
+.contactSec {
+    padding: 7.5rem 0;
+    background: #364440;
+}
+
+.contactImage img {
+    border-radius: 2rem;
+}
+
+.contactContent {
+    margin-left: 1.5rem;
+}
+
+.contactForm {
+    margin-top: 2rem;
+}
+
+.contactForm .form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contactForm .form-control {
+    border: 1px solid rgb(221 232 221 / 50%);
+    background: transparent;
+    outline: unset;
+    box-shadow: unset;
+    color: #DDE8DD;
+    padding-left: 1.5rem;
+}
+
+.contactForm input {
+    height: 50px;
+    border-radius: 50px;
+}
+
+.contactForm textarea {
+    border-radius: 1.5rem;
+    height: 154px;
+    padding-top: 1rem;
+}
+
+.contactForm .form-control::placeholder {
+    color: #DDE8DD;
+}
+
+.contactForm .form-group button {
+    background: transparent;
+    outline: unset;
+    border: unset;
+    padding: 0 0;
+    position: absolute;
+    right: 1.25rem;
+    color: rgb(221 232 221 / 50%);
+}
+
+.textWrap .form-group button {
+    top: 1rem;
+}
+
+.contactForm .themeBtn1 {
+    border: unset;
+    outline: unset;
+    margin-top: 0.5rem;
+}
+
+
+/* Contact Sec Css End */
+
+
+/* Get In Touch Sec Css Start */
+
+.getintouchSec {
+    background: rgb(128 128 128 / 30%);
+}
+
+.getintouchContent p {
+    color: var(--black);
+    font-size: 1.0625rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.getWraps {
+    border: 1px solid var(--black);
+    border-radius: 1rem;
+    padding: 1.5625rem 1.5625rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.getIcon {
+    background: var(--black);
+    width: 40px;
+    height: auto;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    color: var(--white);
+}
+
+.getText h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.getText span {
+    color: #6E7070;
+    line-height: 1.7;
+}
+
+.getText a {
+    color: var(--black);
+    display: block;
+    line-height: 1.7;
+}
+
+.getWraps+.getWraps {
+    margin-top: 1.875rem;
+}
+
+.mapWrap {
+    margin-left: 6rem;
+}
+
+.getShape {
+    position: absolute;
+    left: 0;
+    bottom: 27%;
+    animation: zoom-in-zoom-out 5s ease infinite;
+}
+
+
+/* Get In Touch Sec Css End */
+
+
+/* News Sec Css Start */
+
+.newsWrap figure img {
+    border-radius: 1.5rem;
+}
+
+.newsContent {
+    margin-top: 1.2rem;
+}
+
+.newsContent ul li {
+    display: flex;
+    gap: 2rem;
+}
+
+.newsContent ul li span {
+    color: var(--white);
+    font-size: 0.875rem;
+}
+
+.newsContent h3 {
+    color: var(--white);
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.newsContent h4{
+    color: var(--white);
+}
+
+.newsContent p{
+    color: var(--white);
+}
+
+.newsContent .themeBtn1 {
+    background: transparent;
+    border: 1px solid var(--white);
+    padding: 1rem 1.4em;
+}
+
+
+/* News Sec Css End */
+
+
+/* Footer Css Start */
+
+footer {
+    padding-top: 7.5rem;
+}
+
+.newsletterHeading h2 {
+    font-size: 2.375rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.newsForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsForm input {
+    border: 1px solid #6E7070;
+    height: 64px;
+    border-radius: 50px;
+    width: 400px;
+    padding-left: 1.5rem;
+    color: #6E7070;
+    outline: unset;
+    box-shadow: unset;
+}
+
+.newsForm input::placeholder {
+    color: #6E7070;
+}
+
+.newsForm button {
+    border: unset;
+    outline: unset;
+    background: #364440;
+    color: var(--white);
+    font-weight: 500;
+    padding: 1.25rem 2em;
+    border-radius: 50px;
+}
+
+.newsRow {
+    border-bottom: 1px solid #DDE8DD;
+    padding-bottom: 3.75rem;
+    margin-bottom: 4.375rem;
+}
+
+.footerLogo p {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 1rem 0;
+}
+
+.footerLogo ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.footerLogo ul li a {
+    border: 1px solid var(--secondary);
+    width: 2rem;
+    height: auto;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    color: var(--secondary);
+}
+
+.footerLogo ul li a:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.contactInfo li {
+    display: flex;
+    gap: 1rem;
+}
+
+.contactInfo .footIcon {
+    border: 1px solid var(--black);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+}
+
+.contactInfo li a {
+    color: #6E7070;
+    display: block;
+}
+
+.footText {
+    flex: 1;
+}
+
+.contactInfo li+li {
+    margin-top: 1.25rem;
+}
+
+footer h4 {
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.links li a {
+    color: #6E7070;
+}
+
+.links li a span {
+    margin-left: 0.75rem;
+}
+
+.links li+li {
+    margin-top: 1.0625rem;
+}
+
+.links li a:hover {
+    color: var(--black)
+}
+
+.copyRight {
+    background: #364440;
+    padding: 1.25rem 0;
+    margin-top: 6.25rem;
+}
+
+.copyRight p {
+    font-size: 1rem;
+    color: var(--white);
+    margin: 0;
+}
+
+.copyRight ul {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: end;
+}
+
+.copyRight ul li a {
+    color: var(--white);
+}
+
+
+/* Footer Css End */
+
+
+/* Inner Css Start */
+
+.innerBanner {
+    background: url(../images/innerbanner.png) center no-repeat;
+    height: 610px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: end;
+    padding-bottom: 6.25rem;
+}
+
+.aboutInner {
+    padding-bottom: 6.25rem;
+}
+
+.aboutInner .container,
+.serviceInner .container {
+    max-width: 1440px;
+}
+
+.missionImages {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.missionImages img {
+    border-radius: 24px;
+}
+
+.vissionContent {
+    margin-left: 5rem;
+}
+
+.aboutInner .row+.row {
+    padding-top: 4rem;
+}
+
+.misisonContent p+p {
+    margin-top: 2.5rem;
+}
+
+.innerShape {
+    position: absolute;
+    left: 1.25rem;
+    top: 30%;
+    animation: zoom-in-zoom-out 5s ease infinite;
+}
+
+.serviceInner {
+    padding: 6.25rem 0;
+}
+
+.serviceInner .row+.row {
+    margin-top: 2rem;
+}
+
+.srvImg img {
+    border-radius: 1.875rem;
+}
+
+.srvText {
+    border: 1px solid #CECECE;
+    background: #F2F2F2;
+    border-radius: 1.875rem 1.875rem;
+    padding: 3.5rem 4.375rem;
+    min-height: 529px;
+}
+
+.srvText h3 {
+    font-size: 2.0625rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.srvText p {
+    color: #545454;
+    font-size: 1rem;
+    margin: 0.625rem 0 1.2rem 0;
+}
+
+.viewServices a {
+    border-bottom: 3px solid var(--black);
+}
+
+.viewServices {
+    margin-top: 2.5rem;
+}
+
+.customerInner .customerBox {
+    margin-left: -16rem;
+}
+
+.customerInner .customerBox p {
+    width: 87%;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.customerInner .row+.row {
+    margin-top: 5rem;
+}
+
+.contactInner {
+    margin-bottom: 9.375rem;
+}
+
+/* Register Form */
+.registerForm :is(input, textarea) {
+    width: 100%;
+    border: 1px solid #00000040;
+    resize: none;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-inner .row.row{
+    margin-top: 50px;
+}
+
+.blogContents h2{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.blogContents h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.blogContents p{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.blog-img img{
+    border-radius: 30px;
+}
+
+.privacy-inner{
+    padding: 5rem 0;
+}
+
+.privacy-inner h2{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.privacy-inner h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.privacy-inner ul{
+    margin: 15px 0 15px 35px;
+}
+
+.privacy-inner ul li{
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.privacy-inner ul li strong{
+    color: var(--primary);
+}
+
+.privacy-inner ul li::before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: var(--black);
+    top: 8px;
+    left: -15px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Inner Css End */
